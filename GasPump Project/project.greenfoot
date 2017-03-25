@@ -1,0 +1,11 @@
+#Greenfoot properties
+#Sat Mar 25 14:09:22 PDT 2017
+mainWindow.width=850
+class.Card.superclass=greenfoot.Actor
+project.charset=UTF-8
+version=3.0.0
+class.GasPumpWorld.superclass=greenfoot.World
+world.lastInstantiated=GasPumpWorld
+mainWindow.y=40
+mainWindow.x=40
+mainWindow.height=600
