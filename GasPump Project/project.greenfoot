@@ -1,11 +1,19 @@
 #Greenfoot properties
-#Sat Mar 25 14:09:22 PDT 2017
+#Sat Mar 25 14:21:23 PDT 2017
+class.Beeper.superclass=greenfoot.Actor
 mainWindow.width=850
+class.DisplayScreen.superclass=greenfoot.Actor
+class.Keypad.superclass=greenfoot.Actor
 class.Card.superclass=greenfoot.Actor
 project.charset=UTF-8
 version=3.0.0
+class.Receipt.superclass=greenfoot.Actor
 class.GasPumpWorld.superclass=greenfoot.World
+class.Nozzle.superclass=greenfoot.Actor
 world.lastInstantiated=GasPumpWorld
+class.GasPumpMachine.superclass=greenfoot.Actor
 mainWindow.y=40
 mainWindow.x=40
+class.NozzleHole.superclass=greenfoot.Actor
 mainWindow.height=600
+class.CardSlot.superclass=greenfoot.Actor
