@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sat Mar 25 14:29:19 PDT 2017
+#Sat Mar 25 14:57:07 PDT 2017
 class.Receipt.superclass=greenfoot.Actor
 class.Keypad.superclass=greenfoot.Actor
 project.charset=UTF-8
@@ -15,7 +15,7 @@ world.lastInstantiated=GasPumpWorld
 class.FakeCard.superclass=Card
 mainWindow.y=40
 mainWindow.x=40
-class.RealCard.superclass=Card
 class.Nozzle.superclass=greenfoot.Actor
-class.GasPumpMachine.superclass=greenfoot.Actor
+class.RealCard.superclass=Card
 mainWindow.width=850
+class.GasPumpMachine.superclass=greenfoot.Actor
