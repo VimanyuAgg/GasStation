@@ -1,19 +1,30 @@
 /**
- * Write a description of class TimeOutEvent here.
+ * Write a description of class Utils here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TimeOutEvent implements Leaf 
+public class Utils  
 {
     // instance variables - replace the example below with your own
     private int x;
 
     /**
-     * Constructor for objects of class TimeOutEvent
+     * Constructor for objects of class Utils
      */
-    public TimeOutEvent()
+    public Utils()
     {
+    }
+    
+    public void drag(){
+            int mouseX, mouseY ;
+            
+            if(Greenfoot.mouseDragged(this)) {          
+                MouseInfo mouse = Greenfoot.getMouseInfo();  
+                mouseX=mouse.getX();  
+                mouseY=mouse.getY();  
+                setLocation(mouseX, mouseY);  
+            } 
     }
 
     /**
