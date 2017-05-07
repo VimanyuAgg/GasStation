@@ -2,11 +2,12 @@
 comment0.target=GasPumpState
 comment1.params=o
 comment1.target=void\ register(Observer)
-comment1.text=\n\ isUnValidated\n\ isValidatedButUnfueled\n\ isFuelSelectedButUnfueled\n\ isFilling\n\ isFilled\n\ isPringReceipt\n\ isTimeOut\n\ \n
 comment2.params=o
 comment2.target=void\ unregister(Observer)
-comment3.params=
-comment3.target=void\ setState()
+comment3.params=state
+comment3.target=void\ setState(GasPumpState.State)
 comment4.params=
-comment4.target=void\ notifyObservers()
-numComments=5
+comment4.target=GasPumpState.State\ getState()
+comment5.params=
+comment5.target=void\ notifyObservers()
+numComments=6
