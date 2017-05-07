@@ -24,13 +24,17 @@ public class DisplayScreen extends Actor
     
         switch (gpState.getState()){
             case isUnValidated:
-                String
-                setImage(new GreenfootImage(str, 24, Color.BLACK, Color.WHITE));    
+                String str = "Please enter the 5 digit Zip code Below";
+                setImage(new GreenfootImage(str, 24, Color.BLACK, Color.WHITE)); 
+              
                 break;
+                
+               
                
         
         } 
             
         
     }    
+    
 }
