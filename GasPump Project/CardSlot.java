@@ -14,6 +14,20 @@ public class CardSlot extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-    }    
+        List<Card> cards = getIntersectingObjects(Card.class);
+        if(cards != null && cards.size != 0){
+            for(Card card : cards){
+                if(Greenfoot.mouseDragEnded(card)){
+                    cardSlided(card);
+                }
+            }
+        }
+    }
+    
+    private void cardSlided(Card card){
+        if( card instanceof RealCard){
+            
+        }
+    }
+    
 }

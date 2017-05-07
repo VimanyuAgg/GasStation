@@ -1,3 +1,5 @@
+import java.util.*;
+
 /**
  * Write a description of class GasPumpState here.
  * 
@@ -6,6 +8,16 @@
  */
 public class GasPumpState extends Subject
 {
+    public enum State{
+        isUnValidated,
+     isValidatedButUnfueled,
+     isFuelSelectedButUnfueled,
+     isFilling,
+     isFilled,
+     isPringReceipt,
+     isTimeOut;
+    }
+    
     private List<Observer> observerList = new ArrayList<Observer>();
     //ADD BOOLEANS; ENUM; STRINGS;
     /*
@@ -18,6 +30,18 @@ public class GasPumpState extends Subject
      * isTimeOut
      * 
      */
+    
+    private State state;
+    
+    public State getState(){
+        return this.state;
+    }
+  
+    public void setState(State state){
+        this.state = state;
+        notifyObservers();
+    }
+    
     public void register(Observer o){
         observerList.add(o);
         
@@ -26,11 +50,9 @@ public class GasPumpState extends Subject
     public void unregister(Observer o){
         observerList.remove(o);
     }
-    public void setState(){
+
     
-        notifyObservers();
-    }
-    private void nofityObservers(){
+    private void notifyObservers(){
      for(Observer o: observerList){
          o.act();
         
