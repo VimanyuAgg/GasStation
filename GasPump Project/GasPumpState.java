@@ -54,7 +54,7 @@ public class GasPumpState extends Subject
     
     private void notifyObservers(){
      for(Observer o: observerList){
-         o.act();
+         //o.act();
         
         
      }
