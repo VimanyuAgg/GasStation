@@ -14,6 +14,19 @@ public class Card extends Actor
      */
     public void act() 
     {
+        drag();
         // Add your action code here.
-    }    
+    }
+    
+    
+    public void drag(){
+        int mouseX, mouseY ;
+        
+        if(Greenfoot.mouseDragged(this)) {          
+            MouseInfo mouse = Greenfoot.getMouseInfo();  
+            mouseX=mouse.getX();  
+            mouseY=mouse.getY();  
+            setLocation(mouseX, mouseY);  
+        } 
+    }
 }
