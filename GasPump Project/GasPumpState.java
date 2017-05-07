@@ -8,6 +8,20 @@ import java.util.*;
 public class GasPumpState implements Subject
 {
     private List<Observer> observerList = new ArrayList<Observer>();
+    
+    public enum State{
+      isUnValidated,
+      isValidatedButUnfueled,
+      isFuelSelectedButUnfueled,
+      isFilling,
+      isFilled,
+      isPringReceipt,
+     isTimeOut;  
+    
+    
+    }
+    
+    
     //ADD BOOLEANS; ENUM; STRINGS;
     /*
      * isUnValidated
@@ -19,6 +33,8 @@ public class GasPumpState implements Subject
      * isTimeOut
      * 
      */
+    
+    private State myState;
     public void register(Observer o){
         observerList.add(o);
         
@@ -27,9 +43,13 @@ public class GasPumpState implements Subject
     public void unregister(Observer o){
         observerList.remove(o);
     }
-    public void setState(){
-    
+    public void setState(State state){
+        myState = state;
         notifyObservers();
+    }
+    
+    public State getState(){
+        return myState;
     }
     private void notifyObservers(){
      for(Observer o: observerList){
