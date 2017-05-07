@@ -1,5 +1,4 @@
 #Greenfoot properties
-#Sun May 07 13:29:10 PDT 2017
 target4.type=ClassTarget
 target8.showInterface=false
 class.DisplayScreen.superclass=greenfoot.Actor
@@ -89,6 +88,7 @@ target2.x=0
 target11.showInterface=false
 mainWindow.y=40
 mainWindow.x=40
+
 target8.name=Unleaded
 target6.typeParameters=
 target5.width=80
