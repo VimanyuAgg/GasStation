@@ -4,6 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.util.*;
 public class Composite implements Component 
 {
     private List<Component> components = new ArrayList<Component>();
@@ -20,7 +21,7 @@ public class Composite implements Component
         System.out.println( "Inside composite act" );
         for (Component obj  : components)
         {
-            obj.act();
+         //   obj.act();
         }
         
     }

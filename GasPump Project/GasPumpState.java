@@ -4,7 +4,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class GasPumpState extends Subject
+import java.util.*;
+public class GasPumpState implements Subject
 {
     private List<Observer> observerList = new ArrayList<Observer>();
     //ADD BOOLEANS; ENUM; STRINGS;
@@ -30,7 +31,7 @@ public class GasPumpState extends Subject
     
         notifyObservers();
     }
-    private void nofityObservers(){
+    private void notifyObservers(){
      for(Observer o: observerList){
          //o.act();
         

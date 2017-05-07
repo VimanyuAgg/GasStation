@@ -4,7 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class TimeOutEvent extends Leaf 
+public class TimeOutEvent implements Leaf 
 {
     // instance variables - replace the example below with your own
     private int x;

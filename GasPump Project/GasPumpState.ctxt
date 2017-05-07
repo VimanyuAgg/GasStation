@@ -1,10 +1,12 @@
 #BlueJ class context
 comment0.target=GasPumpState
-comment0.text=\r\n\ Write\ a\ description\ of\ class\ GasPumpState\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
-comment1.params=
-comment1.target=GasPumpState()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ GasPumpState\r\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\r\n\ An\ example\ of\ a\ method\ -\ replace\ this\ comment\ with\ your\ own\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
-numComments=3
+comment1.params=o
+comment1.target=void\ register(Observer)
+comment1.text=\r\n\ isUnValidated\r\n\ isValidatedButUnfueled\r\n\ isFuelSelectedButUnfueled\r\n\ isFilling\r\n\ isFilled\r\n\ isPringReceipt\r\n\ isTimeOut\r\n\ \r\n
+comment2.params=o
+comment2.target=void\ unregister(Observer)
+comment3.params=
+comment3.target=void\ setState()
+comment4.params=
+comment4.target=void\ notifyObservers()
+numComments=5
