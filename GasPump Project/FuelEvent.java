@@ -12,7 +12,7 @@ public class FuelEvent extends Leaf
     /**
      * Constructor for objects of class FuelEven
      */
-    public FuelEven()
+    public FuelEvent()
     {
     }
 

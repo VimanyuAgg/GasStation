@@ -32,7 +32,7 @@ public class GasPumpState extends Subject
     }
     private void nofityObservers(){
      for(Observer o: observerList){
-         o.act();
+         //o.act();
         
         
      }

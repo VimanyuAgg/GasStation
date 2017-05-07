@@ -30,6 +30,7 @@ public class GasPumpWorld extends World
         addObject(gasMachine, 0, 0);
         addObject( new RealCard(), 57, 71 );
         addObject( new FakeCard(), 57, 100 );
+        addObject( new CardSlot(),394,349);
         addObject( new DisplayScreen(), 367, 367 ) ;
         addObject( new Keypad(), 367, 550);
         addObject( new NozzleHole(), 600, 450);
