@@ -27,13 +27,14 @@ public class GasPumpWorld extends World
     private void prepare(){
         GasPumpMachine gasMachine = new GasPumpMachine();
         addObject(gasMachine, 0, 0);
-        addObject( new RealCard(), 57, 71 );
+        addObject( new RealCard(), 100, 300 );
         addObject( new FakeCard(), 57, 100 );
-        addObject( new CardSlot(),34,39);
+        addObject( new CardSlot(),250,470);
         addObject( new DisplayScreen(), 367, 367 ) ;
-        addObject( new Keypad(), 367, 550);
+        addObject( new Keypad(), 430, 500);
         addObject( new NozzleHole(), 600, 450);
         addObject( new Nozzle(), 600,450);
+        addObject( new FuelType(),430,350);
         
       
        
