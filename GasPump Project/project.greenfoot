@@ -1,5 +1,5 @@
 #Greenfoot properties
-#Sun May 07 15:03:56 PDT 2017
+#Sun May 07 15:22:10 PDT 2017
 target16.name=WaitForCreditCardEvent
 target37.typeParameters=
 target26.width=80
@@ -90,7 +90,7 @@ target7.typeParameters=
 target8.height=50
 target25.showInterface=false
 mainWindow.y=23
-mainWindow.x=0
+mainWindow.x=233
 target12.showInterface=false
 target3.showInterface=false
 target17.typeParameters=
@@ -337,7 +337,7 @@ dependency7.from=GasPumpWorld
 target6.width=80
 readme.width=47
 target20.width=80
-mainWindow.height=744
+mainWindow.height=805
 target5.showInterface=false
 target14.showInterface=false
 target26.height=50
@@ -407,4 +407,4 @@ class.Diesel.superclass=FuelType
 class.Composite.superclass=
 target1.height=50
 target4.typeParameters=
-mainWindow.width=1382
+mainWindow.width=1168

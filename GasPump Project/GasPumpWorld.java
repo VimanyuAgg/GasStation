@@ -8,7 +8,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class GasPumpWorld extends World
 {
-
     /**
      * Constructor for objects of class MyWorld.
      * 
@@ -39,4 +38,8 @@ public class GasPumpWorld extends World
       
        
     }
+
+    
 }
+
+
