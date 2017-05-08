@@ -8,23 +8,22 @@ import java.util.*;
 public class GasPumpState implements Subject
 {
     private List<Observer> observerList = new ArrayList<Observer>();
-    
-   
-    
-    
-    //ADD BOOLEANS; ENUM; STRINGS;
-    /*
-     * isUnValidated
-     * isValidatedButUnfueled
-     * isFuelSelectedButUnfueled
-     * isFilling
-     * isFilled
-     * isPringReceipt
-     * isTimeOut
-     * 
-     */
-    
+
     private State myState;
+
+    
+    private static GasPumpState instance = null;
+    
+    private GasPumpState(){
+        super();
+    }
+    
+    public static GasPumpState getInstance(){
+        if(instance == null)
+            instance = new GasPumpState();
+        return instance;
+    }
+    
     public void register(Observer o){
         observerList.add(o);
         
