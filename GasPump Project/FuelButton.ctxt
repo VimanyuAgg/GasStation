@@ -1,4 +1,5 @@
 #BlueJ class context
 comment0.target=FuelButton
-comment0.text=\n\ Write\ a\ description\ of\ class\ FuelButton\ here.\n\ \n\ @author\ (your\ name)\ \n\ @version\ (a\ version\ number\ or\ a\ date)\n
-numComments=1
+comment1.params=
+comment1.target=void\ update()
+numComments=2

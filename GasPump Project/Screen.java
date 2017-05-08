@@ -4,9 +4,15 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Screen extends Actor implements Observer
+public class Screen implements Observer
 {
-    private Actor DisplayScreen = null;
+    private DisplayScreen ds= null;
+    private GasPumpState gs = GasPumpState.getInstance();
+    
+    public void update(){
+        
+    
+    }
     
     
-}
+}   

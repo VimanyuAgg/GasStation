@@ -34,7 +34,7 @@ public class GasPumpWorld extends World
         addObject( new Keypad(), 430, 500);
         addObject( new NozzleHole(), 600, 450);
         addObject( new Nozzle(), 600,450);
-        addObject( new FuelType(),430,350);
+        addObject( new Premium(),430,350);
         
       
        
