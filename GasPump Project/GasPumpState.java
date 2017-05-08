@@ -9,17 +9,7 @@ public class GasPumpState implements Subject
 {
     private List<Observer> observerList = new ArrayList<Observer>();
     
-    public enum State{
-      isUnValidated,
-      isValidatedButUnfueled,
-      isFuelSelectedButUnfueled,
-      isFilling,
-      isFilled,
-      isPringReceipt,
-     isTimeOut;  
-    
-    
-    }
+   
     
     
     //ADD BOOLEANS; ENUM; STRINGS;
