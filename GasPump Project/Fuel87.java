@@ -23,12 +23,21 @@ public class Fuel87 extends FuelType
     public void act() 
     {
         GasPumpState gpState = GasPumpState.getInstance();
-        // Add your action code here.
-        if(gpState.getState() == State.isValidatedButUnfueled && Greenfoot.mousePressed(this)){
+        if (isWorking){
+            // Add your action code here.
+            if(gpState.getState() == State.isValidatedButUnfueled && Greenfoot.mousePressed(this)){
             this.displayMessage();
             System.out.println("Inside Fuel87 - Setting the state to isFuelSelectedButUnfueled");
             gpState.setState(State.isFuelSelectedButUnfueled);
         
+            }
+        
+        }
+        
+         else if(Greenfoot.mousePressed(this)){
+            System.out.println("Fuel87 Status: "+isWorking);
+        GreenfootSound gSound = new GreenfootSound("beepSound.wav");
+        gSound.play();
         }
     }     
 }

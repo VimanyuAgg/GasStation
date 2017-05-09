@@ -15,6 +15,7 @@ public class CardSlot extends Actor
      */
     
     private boolean isWorking = false;
+    
  
     public void setToWorkingState(){
         isWorking = true;

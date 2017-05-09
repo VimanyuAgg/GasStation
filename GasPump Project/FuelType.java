@@ -13,6 +13,7 @@ public class FuelType extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     protected boolean isWorking = false;
+    GreenfootSound gSound = new GreenfootSound("");
     public void setToWorkingState(){
         isWorking = true;
     }

@@ -4,7 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class BuildOrder  
+public class BuildOrder 
 {
     public static Component getOrder(){
     Composite scene1 = new Composite();

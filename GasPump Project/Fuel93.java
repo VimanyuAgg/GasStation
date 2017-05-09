@@ -25,6 +25,7 @@ public class Fuel93 extends FuelType
     
     public void act() 
     {
+        if(isWorking){
         GasPumpState gpState = GasPumpState.getInstance();
         // Add your action code here.
         if(gpState.getState() == State.isValidatedButUnfueled && Greenfoot.mousePressed(this)){
@@ -34,5 +35,13 @@ public class Fuel93 extends FuelType
         
         
         }
+       }
+        else if(Greenfoot.mousePressed(this)){
+            System.out.println("Fuel93 Status: "+isWorking);
+        GreenfootSound gSound = new GreenfootSound("beepSound.wav");
+        gSound.play();
+        }
+        
+        }
 }
-}
+

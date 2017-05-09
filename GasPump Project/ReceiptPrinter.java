@@ -14,6 +14,17 @@ public class ReceiptPrinter extends Actor
      */
     
     private boolean isWorking = false;
+    private boolean printApproval =false;
+    
+    public void setPrintApproval(){
+    printApproval = true;
+    
+    }
+    
+    public boolean getPrintApprovalStatus(){
+    return printApproval;
+    
+    }
     public void setToWorkingState(){
         isWorking = true;
     }
@@ -22,13 +33,16 @@ public class ReceiptPrinter extends Actor
     
         return isWorking;
     }
+    
     private void startPrintingReceipt(){
     GasPumpState gpState = GasPumpState.getInstance();
         // Add your action code here.
         World world = getWorld();
         if(gpState.getState() == State.isFilled){
+            if (!printApproval){
             DisplayScreen ds1 = new DisplayScreen("Do you want to print Receipt ?");
             world.addObject(ds1,400,100);
+            }
             
             //If yes
             gpState.setState(State.isPrintReceipt);
@@ -40,6 +54,10 @@ public class ReceiptPrinter extends Actor
     {
         if (isWorking){
            startPrintingReceipt();
+        }
+        else{
+        GreenfootSound gSound = new GreenfootSound("beepSound.wav");
+        gSound.play();
         }
     }    
 }

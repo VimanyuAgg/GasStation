@@ -12,6 +12,7 @@ public class GasPumpMachine extends Actor
      * Act - do whatever the GasPumpMachine wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    //private boolean isStarted = false;
     public void act() 
     {
         // Add your action code here.
@@ -33,9 +34,11 @@ public class GasPumpMachine extends Actor
         
         
         }
+       
         
         Component order = BuildOrder.getOrder();
         order.startEvent();
+        //isStarted = true;
         
     }    
 }
