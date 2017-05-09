@@ -30,11 +30,12 @@ public class CardSlot extends Actor
     
     private void cardSlided(Card card){
         if( card instanceof RealCard){
-            System.out.println("Card and slot Intersecting!!");
-            GasPumpState gps = GasPumpState.getInstance();
+            System.out.println("Card and Slots intersected!!");   
+           
+          GasPumpState gps = GasPumpState.getInstance();
             //set state
-            gps.setState(GasPumpState.State.isUnValidated);
-            System.out.println(gps.getState());
+            gps.setState(State.isUnValidated);
+            System.out.println("Setting new state "+gps.getState());
             
         }else{
             //TODO: print Fake Card

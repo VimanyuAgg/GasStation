@@ -10,7 +10,8 @@
       isFuelSelectedButUnfueled,
       isFilling,
       isFilled,
-      isPringReceipt,
+      isPrintReceipt,
+      isOver,
      isTimeOut;  
     
     

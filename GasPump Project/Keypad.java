@@ -20,11 +20,13 @@ public class Keypad extends Actor
         World world = getWorld();
         GasPumpState gpState = GasPumpState.getInstance();
         if (gpState.getState() == State.isUnValidated){
-            DisplayScreen ds1 = new DisplayScreen("Ask to Enter Zip Code.");
-            world.addObject(ds1,200,100);
+            System.out.println("Current state is isUnvalidated.");
+            System.out.println("Inside Keypad act");
+            DisplayScreen ds1 = new DisplayScreen("Please Enter Zip Code.");
+            world.addObject(ds1,400,100);
             DisplayScreen ds2 = new DisplayScreen("Zip code Validated");
-            world.addObject(ds2,200,100);  
-            System.out.println("Setting new State");
+            world.addObject(ds2,400,150);  
+            System.out.println("Setting new State isValidatedButUnfueled");
             gpState.setState(State.isValidatedButUnfueled);
             
         }

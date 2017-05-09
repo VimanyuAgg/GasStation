@@ -1,21 +1,21 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class Diesel here.
+ * Write a description of class Unleaded here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Diesel extends FuelType
+public class Fuel89 extends FuelType
 {
     /**
-     * Act - do whatever the Diesel wants to do. This method is called whenever
+     * Act - do whatever the Unleaded wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void displayMessage(){
            World world = getWorld();
            world.removeObjects(getWorld().getObjects(DisplayScreen.class));
-           DisplayScreen ds = new DisplayScreen("You have selected Cheapest Fuel Type");
+           DisplayScreen ds = new DisplayScreen("You have selected Unleaded Fuel Type");
            
            world.addObject(ds,100,250);
     }
@@ -26,8 +26,9 @@ public class Diesel extends FuelType
         // Add your action code here.
         if(gpState.getState() == State.isValidatedButUnfueled && Greenfoot.mousePressed(this)){
             this.displayMessage();
-                        gpState.setState(State.isFuelSelectedButUnfueled);
+            System.out.println("Inside Fuel89 - Setting the state to isFuelSelectedButUnfueled");
+            gpState.setState(State.isFuelSelectedButUnfueled);
         
         }
-    }     
+    }    
 }
