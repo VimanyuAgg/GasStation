@@ -13,4 +13,5 @@ public interface Component
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
        
+    public void startEvent();
 }

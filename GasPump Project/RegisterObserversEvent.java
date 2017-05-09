@@ -4,7 +4,8 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class RegisterObserversEvent implements Leaf 
+public class RegisterObserversEvent implements Component
 {
+    public void startEvent(){}
    
 }

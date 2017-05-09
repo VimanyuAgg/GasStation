@@ -20,4 +20,9 @@ public class FuelButton implements Observer
         
         }
     }
+    
+    public void act(){
+        System.out.println("Inside FuelButton class which implements Observer---No actor assigned");
+    
+    }
 }

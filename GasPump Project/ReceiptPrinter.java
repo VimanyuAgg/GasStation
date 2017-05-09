@@ -12,9 +12,18 @@ public class ReceiptPrinter extends Actor
      * Act - do whatever the ReceiptPrinter wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    public void act() 
-    {
-        GasPumpState gpState = GasPumpState.getInstance();
+    
+    private boolean isWorking = false;
+    public void setToWorkingState(){
+        isWorking = true;
+    }
+    
+    public boolean isWorking(){
+    
+        return isWorking;
+    }
+    private void startPrintingReceipt(){
+    GasPumpState gpState = GasPumpState.getInstance();
         // Add your action code here.
         World world = getWorld();
         if(gpState.getState() == State.isFilled){
@@ -24,6 +33,13 @@ public class ReceiptPrinter extends Actor
             //If yes
             gpState.setState(State.isPrintReceipt);
         
+        }
+    
+    }
+    public void act() 
+    {
+        if (isWorking){
+           startPrintingReceipt();
         }
     }    
 }

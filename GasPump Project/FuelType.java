@@ -12,6 +12,16 @@ public class FuelType extends Actor
      * Act - do whatever the FuleType wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    protected boolean isWorking = false;
+    public void setToWorkingState(){
+        isWorking = true;
+    }
+    
+    public boolean isWorking(){
+    
+        return isWorking;
+    }
+    
     public void displayMessage(){
            World world = getWorld();
            DisplayScreen ds = new DisplayScreen("Please select Fuel Type");

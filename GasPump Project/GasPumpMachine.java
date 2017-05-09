@@ -33,5 +33,9 @@ public class GasPumpMachine extends Actor
         
         
         }
+        
+        Component order = BuildOrder.getOrder();
+        order.startEvent();
+        
     }    
 }

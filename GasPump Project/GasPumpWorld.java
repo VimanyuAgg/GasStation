@@ -12,11 +12,15 @@ public class GasPumpWorld extends World
      * Constructor for objects of class MyWorld.
      * 
      */
+    
+    public static GasPumpWorld gpWorld;
+    
     public GasPumpWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(800, 600, 1); 
         prepare();
+        gpWorld = this;
     }
     
     
@@ -38,6 +42,7 @@ public class GasPumpWorld extends World
         addObject( new Fuel89(),420,350);
         addObject( new Fuel87(),490,350);
         addObject( new ReceiptPrinter(),630,350);
+        
         
       
        

@@ -17,11 +17,12 @@ public class Composite implements Component
         components.remove(c);
     }
     
-     public void act() {
-        System.out.println( "Inside composite act" );
+   // public void startEventChain(){}
+     public void startEvent() {
+        //System.out.println( "Inside composite act" );
         for (Component obj  : components)
         {
-         //   obj.act();
+            obj.startEvent();
         }
         
     }

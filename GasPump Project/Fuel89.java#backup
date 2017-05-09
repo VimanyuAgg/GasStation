@@ -22,15 +22,13 @@ public class Fuel89 extends FuelType
     
     public void act() 
     {
-       if(isWorking){
-         GasPumpState gpState = GasPumpState.getInstance();
+        GasPumpState gpState = GasPumpState.getInstance();
         // Add your action code here.
         if(gpState.getState() == State.isValidatedButUnfueled && Greenfoot.mousePressed(this)){
             this.displayMessage();
             System.out.println("Inside Fuel89 - Setting the state to isFuelSelectedButUnfueled");
             gpState.setState(State.isFuelSelectedButUnfueled);
         
-        }
         }
     }    
 }

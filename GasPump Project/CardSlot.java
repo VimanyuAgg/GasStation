@@ -13,6 +13,18 @@ public class CardSlot extends Actor
      * Act - do whatever the CardSlot wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    private boolean isWorking = false;
+ 
+    public void setToWorkingState(){
+        isWorking = true;
+    }
+    
+    public boolean isWorking(){
+    
+        return isWorking;
+    }
+    
     public void act() 
     {
         
@@ -29,7 +41,7 @@ public class CardSlot extends Actor
     
     
     private void cardSlided(Card card){
-        if( card instanceof RealCard){
+        if( isWorking && card instanceof RealCard){
             System.out.println("Card and Slots intersected!!");   
            
           GasPumpState gps = GasPumpState.getInstance();
