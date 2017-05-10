@@ -13,17 +13,19 @@ public class Scenario1 extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private boolean isRunning = false;
+    private Component order;
     public void act() 
     {
         // Add your action code here.
         if(Greenfoot.mousePressed(this)){
+         System.out.println("Scenario 1 Clicked");
         isRunning = true;
-        Component order = BuildOrder.getOrder();
+        order = BuildOrder.getOrder();
         order.startEvent();
         }
         
         if (isRunning){
-        Component order = BuildOrder.getOrder();
+        //Component order = BuildOrder.getOrder();
         order.startEvent();
         
         

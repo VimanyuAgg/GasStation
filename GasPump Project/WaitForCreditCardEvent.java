@@ -9,11 +9,12 @@ import greenfoot.*;
 public class WaitForCreditCardEvent implements Component
 {
     // instance variables - replace the example below with your own
-    private static boolean isStarted= false;
+    private boolean isStarted= false;
     public void startEvent(){
        if(!isStarted){
         GasPumpWorld.gpWorld.removeObjects(GasPumpWorld.gpWorld.getObjects(DisplayScreen.class));
-       DisplayScreen ds = new DisplayScreen("Please swipe the credit card to BEGIN");
+       //System.out.println("WaitForCreditCard Event Started");
+        DisplayScreen ds = new DisplayScreen("Please swipe the credit card to BEGIN");
        GasPumpWorld.gpWorld.addObject(ds,400,250);
        CardSlot cardSlot = GasPumpWorld.gpWorld.getObjects(CardSlot.class).get(0);
        cardSlot.setToWorkingState();

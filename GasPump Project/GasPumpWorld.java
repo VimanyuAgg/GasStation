@@ -30,7 +30,7 @@ public class GasPumpWorld extends World
      */
     private void prepare(){
         GasPumpMachine gasMachine = new GasPumpMachine();
-        System.out.println("Initializing World");
+        //System.out.println("Initializing World");
         addObject(gasMachine, 550, 290);
         addObject( new RealCard(), 100, 300 );
         addObject( new FakeCard(), 57, 100 );
