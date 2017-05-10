@@ -21,6 +21,7 @@ public class Nozzle extends Actor
     boolean startFilling = false;
         long startTime=0;
         long counter = 0;
+    boolean textDisplayedOnce = false;
     public void act() 
     {
         // Add your action code here.
@@ -46,9 +47,16 @@ public class Nozzle extends Actor
           
             if(startFilling){
                 counter++;
-                world.removeObjects(getWorld().getObjects(DisplayScreen.class));
+                
+                 //ds =new DisplayScreen("");
+                 //System.out.println("textDisplayedOnce: "+textDisplayOnce);
+                if(!textDisplayedOnce){
+                    world.removeObjects(getWorld().getObjects(DisplayScreen.class));
+                    System.out.println("textDisplayedOnce: "+textDisplayedOnce);
                 DisplayScreen ds = new DisplayScreen("Fuel Filling in progress...");
                 world.addObject(ds,400,250);
+                textDisplayedOnce = true;
+                }
                  DisplayScreen ds2 = new DisplayScreen(Long.toString(counter));
                  world.removeObject(ds2);
                  world.addObject(ds2,700,550);
@@ -60,7 +68,9 @@ public class Nozzle extends Actor
                          int durationMillis = (int)(endTime - startTime);
                          System.out.println("You fueled for "+Integer.toString(durationMillis/1000)+ " seconds"); 
                      //}
-                     world.removeObject(ds);
+                     
+                     world.removeObjects(getWorld().getObjects(DisplayScreen.class));
+                        
                      DisplayScreen ds3 = new DisplayScreen("Fuel Filled");
                      world.addObject(ds3,400,250);
                      gpState.setState(State.isFilled);

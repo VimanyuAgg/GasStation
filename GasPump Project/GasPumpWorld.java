@@ -30,6 +30,7 @@ public class GasPumpWorld extends World
      */
     private void prepare(){
         GasPumpMachine gasMachine = new GasPumpMachine();
+        System.out.println("Initializing World");
         addObject(gasMachine, 550, 290);
         addObject( new RealCard(), 100, 300 );
         addObject( new FakeCard(), 57, 100 );
@@ -43,12 +44,12 @@ public class GasPumpWorld extends World
         addObject( new Fuel87(),490,350);
         addObject( new ReceiptPrinter(),630,350);
         
-        addObject( new ScreenOKButton(),140,100);
-        addObject( new ScreenOKButton(),140,150);
-        addObject( new ScreenJokeButton(),140,200);
+        addObject( new ScreenOKButton(),140,200);
+        addObject( new ScreenDummyButton(),140,150);
+        addObject( new ScreenJokeButton(),140,100);
         addObject( new ScreenMoreAssistButton(),140,50);
-        addObject( new ScreenOKButton(),508,100);
-        addObject( new ScreenOKButton(),508,150);
+        addObject( new ScreenDummyButton(),508,100);
+        addObject( new ScreenDummyButton(),508,150);
         addObject( new ScreenAbortButton(),508,200);
         addObject( new ScreenHelpButton(),508,50);
         addObject( new Scenario1(),15,18);

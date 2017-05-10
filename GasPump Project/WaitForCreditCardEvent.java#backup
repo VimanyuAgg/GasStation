@@ -19,7 +19,7 @@ public class WaitForCreditCardEvent implements Component
        cardSlot.setToWorkingState();
        isStarted =true;
        GasPumpState gpState = GasPumpState.getInstance();
-       //gpState.setState(State.isUnInitialized);
+       
         }
 
         

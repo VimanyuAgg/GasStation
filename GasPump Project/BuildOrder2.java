@@ -11,12 +11,12 @@ public class BuildOrder2
     //Composite scene1 = new Composite();
     Component registerEvent = new RegisterObserversEvent();
     Component wait4CCEvent = new WaitForCreditCardEvent();
-    Component printApproval = new PrintApprovalEvent();
+    Component carWashEvent = new CarWashEvent();
     Component fuelEvent = new FuelEvent();
     Component printRecEvent = new PrintReceiptEvent();
     scene2.addChild(registerEvent);
     scene2.addChild(wait4CCEvent);
-    scene2.addChild(printApproval);
+    scene2.addChild(carWashEvent);
     scene2.addChild(fuelEvent);
     scene2.addChild(printRecEvent);
         

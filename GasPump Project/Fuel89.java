@@ -34,7 +34,7 @@ public class Fuel89 extends FuelType
     public void act() 
     {
        if(isWorking){
-           System.out.println("Fuel89 Now functional");
+           //System.out.println("Fuel89 Now functional");
            GasPumpState gpState = GasPumpState.getInstance();
            // Add your action code here.
            if(gpState.getState() == State.isValidatedButUnfueled && Greenfoot.mousePressed(this)){

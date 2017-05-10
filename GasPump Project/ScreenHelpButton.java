@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ScreenHelpButton extends Actor
+public class ScreenHelpButton extends ScreenButtons
 {
     /**
      * Act - do whatever the ScreenHelpButton wants to do. This method is called whenever
