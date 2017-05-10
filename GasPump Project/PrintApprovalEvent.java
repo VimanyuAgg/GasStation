@@ -12,6 +12,10 @@ public class PrintApprovalEvent implements Component
         ReceiptPrinter rp = GasPumpWorld.gpWorld.getObjects(ReceiptPrinter.class).get(0);
         rp.setPrintApproval();
         
+        GasPumpWorld.gpWorld.removeObjects(GasPumpWorld.gpWorld.getObjects(DisplayScreen.class));
+        DisplayScreen ds1 = new DisplayScreen("Do you want to print Receipt ?");
+        GasPumpWorld.gpWorld.addObject(ds1,400,100);
+        
       
   }
 }

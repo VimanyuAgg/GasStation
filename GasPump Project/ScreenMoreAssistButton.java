@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ScreenMoreAssistButton extends Actor
+public class ScreenMoreAssistButton extends ScreenButtons
 {
     /**
      * Act - do whatever the ScreenMoreAssistButton wants to do. This method is called whenever
@@ -20,7 +20,7 @@ public class ScreenMoreAssistButton extends Actor
         world.removeObjects(getWorld().getObjects(DisplayScreen.class));    
         DisplayScreen ds = new DisplayScreen("Please stay put.\nHelp is on the way ");
         world.addObject(ds,400,250);
-        GreenfootSound helpSound = new GreenfootSound("BusySignal.wav");
+        GreenfootSound helpSound = new GreenfootSound("HelpNeeded.wav");
         helpSound.play();
         GasPumpState gpState  = GasPumpState.getInstance();
         

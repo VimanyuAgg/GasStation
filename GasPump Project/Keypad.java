@@ -31,7 +31,7 @@ public class Keypad extends Actor
             world.addObject(ds2,400,150);
                                     System.out.println("Added DS2");
             MouseInfo mouse = Greenfoot.getMouseInfo();
-            for(String key:keysPressed){
+           for(String key:keysPressed){
                             DisplayScreen ds3 = new DisplayScreen(key);
                             world.addObject(ds3,inputX,145);
                             inputX=inputX+20;
@@ -109,14 +109,21 @@ public class Keypad extends Actor
                 }
                 if(finalString.equals("12312")){
                      gpState.setState(State.isValidatedButUnfueled);
+                     System.out.println("State is set to isValidatedButUnfueled");
                 }
               }
             }                       
-            if(gpState.getState()==State.isValidatedButUnfueled){
-            
-                System.out.println("Setting new State isValidatedButUnfueled");
-                gpState.setState(State.isValidatedButUnfueled);
-             }
+            System.out.println("State is set to isValidatedButUnfueled---2");
         }
+        /*GasPumpState gpState = GasPumpState.getInstance();
+        World world = getWorld();
+        //int inputX=361; // 378
+        if (gpState.getState() == State.isUnValidated){
+           world.removeObjects(getWorld().getObjects(DisplayScreen.class));
+           DisplayScreen ds = new DisplayScreen("Zip code validated");
+           world.addObject(ds,400,250);
+           gpState.setState(State.isValidatedButUnfueled);  
+        }*/
+        
     }
 }

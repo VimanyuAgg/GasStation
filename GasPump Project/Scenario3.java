@@ -12,8 +12,23 @@ public class Scenario3 extends Actor
      * Act - do whatever the Scenario3 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private boolean isRunning = false;
+    private Component order3;
     public void act() 
     {
         // Add your action code here.
-    }    
+        if(Greenfoot.mousePressed(this)){
+         System.out.println("Scenario 1 Clicked");
+        isRunning = true;
+        order3 = BuildOrder3.getOrder();
+        order3.startEvent();
+        }
+        
+        if (isRunning){
+        //Component order = BuildOrder.getOrder();
+        order3.startEvent();
+        
+        
+        }
+    } 
 }
