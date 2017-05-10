@@ -47,7 +47,7 @@ public class GasPumpWorld extends World
         addObject( new ScreenOKButton(),140,150);
         addObject( new ScreenJokeButton(),140,200);
         addObject( new ScreenMoreAssistButton(),140,50);
-        addObject( new ScreenOKButton(),508,100);
+        addObject( new ScreenDeclineButton(),508,100);
         addObject( new ScreenOKButton(),508,150);
         addObject( new ScreenAbortButton(),508,200);
         addObject( new ScreenHelpButton(),508,50);

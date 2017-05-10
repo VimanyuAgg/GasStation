@@ -55,7 +55,7 @@ public class ReceiptPrinter extends Actor
         if (isWorking){
            startPrintingReceipt();
         }
-        else{
+        else if(Greenfoot.mousePressed(this)){
         GreenfootSound gSound = new GreenfootSound("beepSound.wav");
         gSound.play();
         }

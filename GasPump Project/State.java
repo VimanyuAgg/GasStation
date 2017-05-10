@@ -9,6 +9,7 @@
       isValidatedButUnfueled,
       isFuelSelectedButUnfueled,
       isFilling,
+      isCarWashSelected,
       isFilled,
       isPrintReceipt,
       isOver,
