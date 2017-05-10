@@ -13,7 +13,6 @@
       isCarWashSelected,
       isFilled,
       isPrintReceipt,
-      isCarWashSelected,
       isOver,
      isTimeOut;  
     

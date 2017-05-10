@@ -16,7 +16,7 @@ public class FuelEvent implements Component
         GasPumpWorld.gpWorld.removeObjects(GasPumpWorld.gpWorld.getObjects(DisplayScreen.class));
         DisplayScreen ds = new DisplayScreen("Please select the Fuel Type");
            
-           GasPumpWorld.gpWorld.addObject(ds,100,250);
+           GasPumpWorld.gpWorld.addObject(ds,350,250);
     Fuel93 f93 = GasPumpWorld.gpWorld.getObjects(Fuel93.class).get(0);
     f93.setToWorkingState();
     //System.out.println("Commanded Fuel93 to start working");

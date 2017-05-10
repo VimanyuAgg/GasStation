@@ -12,16 +12,30 @@ public class ScreenOKButton extends ScreenButtons
      * Act - do whatever the ScreenOKButton wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    World world = getWorld(); 
-    ReceiptPrinter rp=world.getObjects(ReceiptPrinter.class).get(0);
+
+    
   //  rp.setPrintApproval();
      GasPumpState gpState = GasPumpState.getInstance();
     public void act() 
     {
+            World world = getWorld(); 
         if(gpState.getState() == State.isCarWashSelected && Greenfoot.mousePressed(this)){
+            ReceiptPrinter rp=world.getObjects(ReceiptPrinter.class).get(0);
             gpState.setState(State.isValidatedButUnfueled);
             rp.setPrintApproval();
         }
+        if(gpState.getState() == State.isUnInitialized && Greenfoot.mousePressed(this)){
+        GreenfootSound gSound = new GreenfootSound("beepSound.wav");
+          gSound.play();
+        }
         // Add your action code here.
+        
+        if(gpState.getState() == State.isFilled && Greenfoot.mousePressed(this)){
+
+        world.removeObjects(getWorld().getObjects(DisplayScreen.class));
+        DisplayScreen ds1 = new DisplayScreen("Printing Receipt! ");
+        gpState.setState(State.isPrintReceipt);
+        
+        }
     }    
 }

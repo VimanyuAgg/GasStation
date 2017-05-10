@@ -15,12 +15,12 @@ public class WaitForCreditCardEvent implements Component
         GasPumpWorld.gpWorld.removeObjects(GasPumpWorld.gpWorld.getObjects(DisplayScreen.class));
        //System.out.println("WaitForCreditCard Event Started");
         DisplayScreen ds = new DisplayScreen("Please swipe the credit card to BEGIN");
-       GasPumpWorld.gpWorld.addObject(ds,400,250);
+       GasPumpWorld.gpWorld.addObject(ds,350,250);
        CardSlot cardSlot = GasPumpWorld.gpWorld.getObjects(CardSlot.class).get(0);
        cardSlot.setToWorkingState();
        isStarted =true;
        GasPumpState gpState = GasPumpState.getInstance();
-       //gpState.setState(State.isUnInitialized);
+       gpState.setState(State.isUnInitialized);
         }
 
         

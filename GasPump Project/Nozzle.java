@@ -54,7 +54,7 @@ public class Nozzle extends Actor
                     world.removeObjects(getWorld().getObjects(DisplayScreen.class));
                     System.out.println("textDisplayedOnce: "+textDisplayedOnce);
                 DisplayScreen ds = new DisplayScreen("Fuel Filling in progress...");
-                world.addObject(ds,400,250);
+                world.addObject(ds,350,250);
                 textDisplayedOnce = true;
                 }
                  DisplayScreen ds2 = new DisplayScreen(Long.toString(counter));
@@ -72,7 +72,7 @@ public class Nozzle extends Actor
                      world.removeObjects(getWorld().getObjects(DisplayScreen.class));
                         
                      DisplayScreen ds3 = new DisplayScreen("Fuel Filled");
-                     world.addObject(ds3,400,250);
+                     world.addObject(ds3,350,250);
                      gpState.setState(State.isFilled);
                     }
                 }   

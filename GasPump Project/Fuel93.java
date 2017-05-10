@@ -16,11 +16,11 @@ public class Fuel93 extends FuelType
     public void displayMessage(){
            World world = getWorld();
            world.removeObjects(getWorld().getObjects(DisplayScreen.class));
-           DisplayScreen ds = new DisplayScreen("You have selected Premium Fuel Type");
+           DisplayScreen ds = new DisplayScreen("You have selected Premium Fuel \n\t\tType");
            DisplayScreen ds2 = new DisplayScreen("Please start filling your tank");
            
-           world.addObject(ds,400,250);
-           world.addObject(ds2,400,350);
+           world.addObject(ds,330,120);
+           world.addObject(ds2,320,180);
     }
     
     public void act() 

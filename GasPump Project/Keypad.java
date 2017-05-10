@@ -21,20 +21,20 @@ public class Keypad extends Actor
         // Add your action code here.
         World world = getWorld();
         GasPumpState gpState = GasPumpState.getInstance();
-        int inputX=361; // 378
+        int inputX=316; // 378
         if (gpState.getState() == State.isUnValidated){
             System.out.println("Current state is isUnvalidated.");
             System.out.println("Inside Keypad act");
             DisplayScreen ds1 = new DisplayScreen("Please Enter Zip Code.");
-            world.addObject(ds1,400,100);
+            world.addObject(ds1,350,100);
              DisplayScreen ds2 = new DisplayScreen("_ _ _ _ _");
-            world.addObject(ds2,400,150);
+            world.addObject(ds2,350,150);
                                     System.out.println("Added DS2");
             MouseInfo mouse = Greenfoot.getMouseInfo();
            for(String key:keysPressed){
                             DisplayScreen ds3 = new DisplayScreen(key);
                             world.addObject(ds3,inputX,145);
-                            inputX=inputX+20;
+                            inputX=inputX+18;
             }
            if(mouse != null){
                int x= Greenfoot.getMouseInfo().getX();

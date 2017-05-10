@@ -15,6 +15,7 @@ public class ReceiptPrinter extends Actor
     
     private boolean isWorking = false;
     private boolean printApproval =false;
+    private boolean displayedTextOnce = false;
     
     public void setPrintApproval(){
     printApproval = true;
@@ -39,13 +40,19 @@ public class ReceiptPrinter extends Actor
         // Add your action code here.
         World world = getWorld();
         if(gpState.getState() == State.isFilled){
-            if (!printApproval){
+            if (!printApproval && !displayedTextOnce){
             DisplayScreen ds1 = new DisplayScreen("Do you want to print Receipt ?");
-            world.addObject(ds1,400,100);
+            DisplayScreen ds2 = new DisplayScreen("YES");
+            DisplayScreen ds3 = new DisplayScreen("NO");
+            world.addObject(ds1,330,150);
+            world.addObject(ds2,190,200);
+            world.addObject(ds3,460,100);
+            displayedTextOnce = true;
             }
             
             //If yes
-            gpState.setState(State.isPrintReceipt);
+            
+            
         
         }
     

@@ -18,7 +18,7 @@ public class ScreenJokeButton extends ScreenButtons
         
         GasPumpState gpState = GasPumpState.getInstance();
         
-        if(gpState.getState() == State.isUnValidated && Greenfoot.mousePressed(this)){
+        if((gpState.getState() == State.isUnValidated || gpState.getState() == State.isUnInitialized) && Greenfoot.mousePressed(this)){
         GreenfootSound gSound = new GreenfootSound("beepSound.wav");
         gSound.play();
         }
