@@ -4,7 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PrintApproval implements Component
+public class PrintApprovalEvent implements Component
 {
   public void startEvent(){
       GasPumpState gpState = GasPumpState.getInstance();

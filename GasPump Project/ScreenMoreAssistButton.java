@@ -15,5 +15,16 @@ public class ScreenMoreAssistButton extends Actor
     public void act() 
     {
         // Add your action code here.
+        World world = getWorld();
+        if(Greenfoot.mousePressed(this)){
+        world.removeObjects(getWorld().getObjects(DisplayScreen.class));    
+        DisplayScreen ds = new DisplayScreen("Please stay put.\nHelp is on the way ");
+        world.addObject(ds,400,250);
+        GreenfootSound helpSound = new GreenfootSound("BusySignal.wav");
+        helpSound.play();
+        GasPumpState gpState  = GasPumpState.getInstance();
+        
+        gpState.setState(State.isOver);
+        }
     }    
 }
