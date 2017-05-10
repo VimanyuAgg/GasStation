@@ -19,9 +19,11 @@ public class ScreenOKButton extends ScreenButtons
     public void act() 
     {
             World world = getWorld(); 
-        if(gpState.getState() == State.isCarWashSelected && Greenfoot.mousePressed(this)){
+        if((gpState.getState() == State.isCarWashSelected 
+           ||gpState.getState() == State.isPrintApproval) && Greenfoot.mousePressed(this)){
             ReceiptPrinter rp=world.getObjects(ReceiptPrinter.class).get(0);
             gpState.setState(State.isValidatedButUnfueled);
+            System.out.println("Inside screenOKButton for carwash and setting PrintApproval to yes");
             rp.setPrintApproval();
         }
         if(gpState.getState() == State.isUnInitialized && Greenfoot.mousePressed(this)){
@@ -29,6 +31,7 @@ public class ScreenOKButton extends ScreenButtons
           gSound.play();
         }
         // Add your action code here.
+        
         
         if(gpState.getState() == State.isFilled && Greenfoot.mousePressed(this)){
 
