@@ -51,6 +51,10 @@ public class ReceiptPrinter extends Actor
             }
            
             //If yes
+            if(printApproval){
+                gpState.setState(State.isPrintReceipt);
+            
+            }
             
             
         
