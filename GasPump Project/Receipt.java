@@ -18,7 +18,7 @@ public class Receipt extends Actor
         GasPumpState gpState = GasPumpState.getInstance();
         World world = getWorld();
         if(gpState.getState() == State.isPrintReceipt){
-            System.out.println("Inside receipt act");
+            //System.out.println("Inside receipt act");
 
             //get price
             //get price + Carwash Price <---need to print sum
@@ -35,6 +35,7 @@ public class Receipt extends Actor
                 world.removeObjects(getWorld().getObjects(DisplayScreen.class));
                 world.addObject(ds1,550,460);
                 world.addObject(ds2_withoutCarwash,550,480);
+                System.out.print("Car wash status "+cwStatus.getCarWashSelectedStatus());
                 if(cwStatus.getCarWashSelectedStatus()){
                     world.addObject(ds3_CarwashDetails,550,510);
                     world.addObject(ds3_finalBill,550,520);

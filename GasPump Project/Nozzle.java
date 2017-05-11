@@ -87,7 +87,7 @@ public class Nozzle extends Actor
                 }
                  //DisplayScreen ds2 = new DisplayScreen(Long.toString(counter));
                  DisplayScreen ds4 = new DisplayScreen("Price: $"+df.format(fuelPrice)+"/gal.");
-                 DisplayScreen ds5 = new DisplayScreen("Fuel: "+df.format(counter/100)+"gal.");
+                 DisplayScreen ds5 = new DisplayScreen("Fuel: "+df.format(counter/100.00)+"gal.");
                  DisplayScreen ds6 = new DisplayScreen("Bill: $"+df.format(currentBill));
                  //world.removeObject(ds2);
                  world.addObject(ds4,700,450);
