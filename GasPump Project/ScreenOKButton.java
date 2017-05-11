@@ -29,11 +29,13 @@ public class ScreenOKButton extends ScreenButtons
         if((gpState.getState() == State.isCarWashSelected 
            ||gpState.getState() == State.isPrintApproval) && Greenfoot.mousePressed(this)){
             ReceiptPrinter rp=world.getObjects(ReceiptPrinter.class).get(0);
-            gpState.setState(State.isValidatedButUnfueled);
+            
             System.out.println("Inside screenOKButton for carwash and setting PrintApproval to yes");
             if(gpState.getState() == State.isCarWashSelected){
-            carWashSelected = true;
+                System.out.println("Setting carwashSelected boolean to true");
+                carWashSelected = true;
             }
+            gpState.setState(State.isValidatedButUnfueled);
             rp.setPrintApproval();
         }
        

@@ -52,7 +52,11 @@ public class ReceiptPrinter extends Actor
            
             //If yes
             if(printApproval){
+                Receipt receipt = new Receipt();
+                world.addObject(receipt,550,450);
+                
                 gpState.setState(State.isPrintReceipt);
+                
             
             }
             
