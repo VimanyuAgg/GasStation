@@ -12,7 +12,7 @@ public class FuelEvent implements Component
     
     if(gpState.getState() == State.isValidatedButUnfueled){
         //do not proceed until proper state is set
-        System.out.println("Fuel event Start Triggered");
+        //System.out.println("Fuel event Start Triggered");
         GasPumpWorld.gpWorld.removeObjects(GasPumpWorld.gpWorld.getObjects(DisplayScreen.class));
         DisplayScreen ds = new DisplayScreen("Please select the Fuel Type");
            

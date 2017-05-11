@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.text.DecimalFormat;
 /**
  * Write a description of class Unleaded here.
  * 
@@ -13,13 +13,25 @@ public class Fuel89 extends FuelType
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     protected boolean isWorking = false;
-    GreenfootSound gSound = new GreenfootSound("");
+    private double price = 1.50;
+    private boolean isSelected = false;
+    //GreenfootSound gSound = new GreenfootSound("");
+    
     public void setToWorkingState(){
         isWorking = true;
     }
     
-    public boolean isWorking(){
+    public double getPrice(){
+        //DecimalFormat df = new DecimalFormat("0.00");
+        return price;
+    }
     
+    public boolean wasSelected(){
+        return isSelected;
+    }
+    
+    public boolean isWorking(){
+        
         return isWorking;
     }
     
@@ -28,10 +40,10 @@ public class Fuel89 extends FuelType
            world.removeObjects(getWorld().getObjects(DisplayScreen.class));
            DisplayScreen ds = new DisplayScreen("You have selected Plus Fuel \n\t\tType");
            DisplayScreen ds2 = new DisplayScreen("Please start filling your tank");
-           DisplayScreen ds3 = new DisplayScreen("$2/lt.");
+           //DisplayScreen ds3 = new DisplayScreen("$2/lt.");
            world.addObject(ds,330,120);
            world.addObject(ds2,320,180);
-           world.addObject(ds3, 628, 549);
+           //world.addObject(ds3, 628, 549);
     }
     
     public void act() 
@@ -42,8 +54,9 @@ public class Fuel89 extends FuelType
            GasPumpState gpState = GasPumpState.getInstance();
            // Add your action code here.
            if(gpState.getState() == State.isValidatedButUnfueled && Greenfoot.mousePressed(this)){
-           Nozzle nozzel=world.getObjects(Nozzle.class).get(0);
-           nozzel.setFuelPrize(2);
+           //Nozzle nozzel=world.getObjects(Nozzle.class).get(0);
+           //nozzel.setFuelPrice(2);
+           isSelected = true;
            this.displayMessage();
             System.out.println("Inside Fuel89 - Setting the state to isFuelSelectedButUnfueled");
             gpState.setState(State.isFuelSelectedButUnfueled);

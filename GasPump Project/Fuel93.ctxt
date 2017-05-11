@@ -2,8 +2,11 @@
 comment0.target=Fuel93
 comment0.text=\r\n\ Write\ a\ description\ of\ class\ Premium\ here.\r\n\ \r\n\ @author\ (your\ name)\ \r\n\ @version\ (a\ version\ number\ or\ a\ date)\r\n
 comment1.params=
-comment1.target=void\ displayMessage()
-comment1.text=\r\n\ Act\ -\ do\ whatever\ the\ Premium\ wants\ to\ do.\ This\ method\ is\ called\ whenever\r\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\r\n
+comment1.target=double\ getPrice()
 comment2.params=
-comment2.target=void\ act()
-numComments=3
+comment2.target=boolean\ wasSelected()
+comment3.params=
+comment3.target=void\ displayMessage()
+comment4.params=
+comment4.target=void\ act()
+numComments=5

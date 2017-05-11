@@ -12,6 +12,18 @@ public class Fuel93 extends FuelType
      * Act - do whatever the Premium wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private double price = 2;
+    private boolean isSelected = false;
+    public double getPrice(){
+        //DecimalFormat df = new DecimalFormat("0.00");
+        return price;
+    }
+    
+    
+    public boolean wasSelected(){
+        return isSelected;
+    }
+    
     
     public void displayMessage(){
            World world = getWorld();
@@ -32,7 +44,7 @@ public class Fuel93 extends FuelType
                 this.displayMessage();
                 System.out.println("Inside Fuel93 - Setting the state to isFuelSelectedButUnfueled");
                 gpState.setState(State.isFuelSelectedButUnfueled);
-        
+                isSelected = true;
         
         }
        }
