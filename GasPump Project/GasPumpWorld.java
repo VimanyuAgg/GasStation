@@ -31,17 +31,17 @@ public class GasPumpWorld extends World
     private void prepare(){
         GasPumpMachine gasMachine = new GasPumpMachine();
         //System.out.println("Initializing World");
-        addObject(gasMachine, 550, 290);
+        addObject(gasMachine, 420, 290);
         addObject( new RealCard(), 100, 300 );
         addObject( new FakeCard(), 57, 100 );
-        addObject( new CardSlot(),290,480);
+        addObject( new CardSlot(),230,480);
         addObject( new DisplayScreen(), 367, 367 ) ;
         addObject( new Keypad(), 430, 500);
         addObject( new NozzleHole(), 650, 80);
         addObject( new Nozzle(), 720,140);
-        addObject( new Fuel93(),350,350);
-        addObject( new Fuel89(),420,350);
-        addObject( new Fuel87(),490,350);
+        addObject( new Fuel93(),250,350);
+        addObject( new Fuel89(),340,350);
+        addObject( new Fuel87(),430,350);
         addObject( new ReceiptPrinter(),630,350);
         
         addObject( new ScreenOKButton(),140,200);
