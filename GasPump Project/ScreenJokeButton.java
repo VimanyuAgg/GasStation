@@ -1,5 +1,6 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.util.*;
+import java.lang.*;
 /**
  * Prints random jokes to user - after validation
  * 
@@ -25,8 +26,14 @@ public class ScreenJokeButton extends ScreenButtons
         else if(Greenfoot.mousePressed(this)){
             World world = getWorld();   
             world.removeObjects(getWorld().getObjects(DisplayScreen.class));
-             DisplayScreen ds = new DisplayScreen("I am joking");
-                world.addObject(ds,400,250);
+            List<String> jokesList = new ArrayList<String>();
+            jokesList.add("Team work is important; it helps to\n put the blame on someone else.");
+            jokesList.add("You're not fat, you're just... \n\teasier to see.");
+            jokesList.add("My wife and I were happy for twenty years. Then we met.");
+            int randomNum = ((int)((Math.random()*jokesList.size())%jokesList.size()));
+            DisplayScreen ds = new DisplayScreen(jokesList.get(randomNum));
+
+                world.addObject(ds,340,250);
         }
     }    
 }
