@@ -28,19 +28,23 @@ public class Fuel89 extends FuelType
            world.removeObjects(getWorld().getObjects(DisplayScreen.class));
            DisplayScreen ds = new DisplayScreen("You have selected Plus Fuel \n\t\tType");
            DisplayScreen ds2 = new DisplayScreen("Please start filling your tank");
-           
+           DisplayScreen ds3 = new DisplayScreen("$2/lt.");
            world.addObject(ds,330,120);
            world.addObject(ds2,320,180);
+           world.addObject(ds3, 628, 549);
     }
     
     public void act() 
     {
        if(isWorking){
+           World world = getWorld();
            //System.out.println("Fuel89 Now functional");
            GasPumpState gpState = GasPumpState.getInstance();
            // Add your action code here.
            if(gpState.getState() == State.isValidatedButUnfueled && Greenfoot.mousePressed(this)){
-            this.displayMessage();
+           Nozzle nozzel=world.getObjects(Nozzle.class).get(0);
+           nozzel.setFuelPrize(2);
+           this.displayMessage();
             System.out.println("Inside Fuel89 - Setting the state to isFuelSelectedButUnfueled");
             gpState.setState(State.isFuelSelectedButUnfueled);
         

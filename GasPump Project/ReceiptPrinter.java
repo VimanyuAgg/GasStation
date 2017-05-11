@@ -49,7 +49,7 @@ public class ReceiptPrinter extends Actor
             world.addObject(ds3,460,100);
             displayedTextOnce = true;
             }
-            
+           
             //If yes
             
             

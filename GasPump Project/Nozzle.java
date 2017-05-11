@@ -21,7 +21,13 @@ public class Nozzle extends Actor
     boolean startFilling = false;
         long startTime=0;
         long counter = 0;
+        long currentPrize=0;
+        long fuelPrize=0;
     boolean textDisplayedOnce = false;
+    
+    public void setFuelPrize(long fuelPrize){
+        this.fuelPrize=fuelPrize;
+    }
     public void act() 
     {
         // Add your action code here.
@@ -47,7 +53,7 @@ public class Nozzle extends Actor
           
             if(startFilling){
                 counter++;
-                
+                currentPrize=counter*fuelPrize;
                  //ds =new DisplayScreen("");
                  //System.out.println("textDisplayedOnce: "+textDisplayOnce);
                 if(!textDisplayedOnce){
@@ -58,8 +64,12 @@ public class Nozzle extends Actor
                 textDisplayedOnce = true;
                 }
                  DisplayScreen ds2 = new DisplayScreen(Long.toString(counter));
+                 DisplayScreen ds4 = new DisplayScreen("Prize:"+Long.toString(fuelPrize)+"/lt.");
+                 DisplayScreen ds5 = new DisplayScreen(Long.toString(currentPrize));
                  world.removeObject(ds2);
-                 world.addObject(ds2,700,550);
+                 world.addObject(ds4,679,480);
+                 world.addObject(ds2,750,550);
+                 world.addObject(ds5,650,550);
                  //List<NozzleHole> nozzleHole = getIntersectingObjects(NozzleHole.class);
                  //nozzleHole != null && nozzleHole.size() != 0 
                  if(getOneObjectAtOffset(0,0,NozzleHole.class) !=null && counter >10){

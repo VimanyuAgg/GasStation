@@ -34,6 +34,7 @@ public class ScreenOKButton extends ScreenButtons
 
         world.removeObjects(getWorld().getObjects(DisplayScreen.class));
         DisplayScreen ds1 = new DisplayScreen("Printing Receipt! ");
+        world.addObject(ds1,100,250); 
         gpState.setState(State.isPrintReceipt);
         
         }
