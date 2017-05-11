@@ -4,6 +4,7 @@
  * @author (your name) 
  * @version (a version number or a date)
  */
+import java.text.DecimalFormat;
 public class FuelEvent implements Component 
 {
         
@@ -12,19 +13,30 @@ public class FuelEvent implements Component
     
     if(gpState.getState() == State.isValidatedButUnfueled){
         //do not proceed until proper state is set
-        //System.out.println("Fuel event Start Triggered");
+        Fuel93 f93 = GasPumpWorld.gpWorld.getObjects(Fuel93.class).get(0);
+        Fuel87 f87 = GasPumpWorld.gpWorld.getObjects(Fuel87.class).get(0);
+        Fuel89 f89 = GasPumpWorld.gpWorld.getObjects(Fuel89.class).get(0);
+        System.out.println("Fuel event Start Triggered");
         GasPumpWorld.gpWorld.removeObjects(GasPumpWorld.gpWorld.getObjects(DisplayScreen.class));
-        DisplayScreen ds = new DisplayScreen("Please select the Fuel Type");
+        DecimalFormat df = new DecimalFormat("0.00");
+        DisplayScreen ds = new DisplayScreen("Please select the Fuel type");
+        DisplayScreen ds2 = new DisplayScreen("$"+(df.format(f93.getPrice())+"/\ngal."));
+        DisplayScreen ds3 = new DisplayScreen("$"+String.valueOf(df.format(f89.getPrice())+"/\ngal."));
+        DisplayScreen ds4 = new DisplayScreen("$"+String.valueOf(df.format(f87.getPrice())+"/\ngal."));
+        GasPumpWorld.gpWorld.addObject(ds2,250,259);
+         GasPumpWorld.gpWorld.addObject(ds3,340,259);
+         GasPumpWorld.gpWorld.addObject(ds4,430,259);
+         GasPumpWorld.gpWorld.addObject(ds,320,150); 
            
-           GasPumpWorld.gpWorld.addObject(ds,350,250);
-    Fuel93 f93 = GasPumpWorld.gpWorld.getObjects(Fuel93.class).get(0);
+          // GasPumpWorld.gpWorld.addObject(ds,350,250);
+
     f93.setToWorkingState();
     //System.out.println("Commanded Fuel93 to start working");
-    Fuel87 f87 = GasPumpWorld.gpWorld.getObjects(Fuel87.class).get(0);
+
     f87.setToWorkingState();
     
 
-    Fuel89 f89 = GasPumpWorld.gpWorld.getObjects(Fuel89.class).get(0);
+
     f89.setToWorkingState();
     }
     

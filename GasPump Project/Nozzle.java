@@ -90,9 +90,9 @@ public class Nozzle extends Actor
                  DisplayScreen ds5 = new DisplayScreen("Fuel: "+df.format(counter/100.00)+"gal.");
                  DisplayScreen ds6 = new DisplayScreen("Bill: $"+df.format(currentBill));
                  //world.removeObject(ds2);
-                 world.addObject(ds4,700,450);
-                 world.addObject(ds5,650,480);
-                 world.addObject(ds6,650,510);
+                 world.addObject(ds4,663,490);
+                 world.addObject(ds5,670,520);
+                 world.addObject(ds6,663,550);
                  //List<NozzleHole> nozzleHole = getIntersectingObjects(NozzleHole.class);
                  //nozzleHole != null && nozzleHole.size() != 0 
                  if(getOneObjectAtOffset(0,0,NozzleHole.class) !=null && counter >10){
