@@ -20,6 +20,7 @@ public class Scenario2 extends Actor
         
          if(Greenfoot.mousePressed(this)){
           isRunning = true;
+          System.out.println("Hitting scenario2");
         order2 = BuildOrder2.getOrder();
         order2.startEvent();
         }

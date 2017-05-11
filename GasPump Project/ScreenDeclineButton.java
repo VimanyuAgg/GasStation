@@ -13,7 +13,9 @@ public class ScreenDeclineButton  extends ScreenButtons
     public void act() 
     {
         World world = getWorld(); 
-        if(gpState.getState() == State.isCarWashSelected && Greenfoot.mousePressed(this)){
+        if((gpState.getState() == State.isCarWashSelected 
+           ||gpState.getState() == State.isPrintApproval) && Greenfoot.mousePressed(this)){
+            System.out.println("Inside screenDeclineButton for carwash/printApproval");
             gpState.setState(State.isValidatedButUnfueled);
         }
         // Add your action code here.
