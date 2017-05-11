@@ -32,7 +32,7 @@ public class Keypad extends Actor
                                     System.out.println("Added DS2");
             MouseInfo mouse = Greenfoot.getMouseInfo();
            for(String key:keysPressed){
-                            DisplayScreen ds3 = new DisplayScreen(key);
+                            DisplayScreen ds3 = new DisplayScreen("X");
                             world.addObject(ds3,inputX,145);
                             inputX=inputX+18;
             }
@@ -40,11 +40,7 @@ public class Keypad extends Actor
                int x= Greenfoot.getMouseInfo().getX();
                int y =Greenfoot.getMouseInfo().getY();
                System.out.println("x:"+x);
-                                        System.out.println("y:"+y);
-               if(Greenfoot.mousePressed(this)){
-                            System.out.println("x:"+x);
-                                        System.out.println("y:"+y);
-                }
+            
                if((x>=367 && x<=394) && (y>=394 && y<=470) && Greenfoot.mouseClicked(this)){
                 System.out.println("1 Pressed!!!!");
                 if(keysPressed.size()<5)
@@ -110,10 +106,26 @@ public class Keypad extends Actor
                 if(finalString.equals("12312")){
                      gpState.setState(State.isValidatedButUnfueled);
                      System.out.println("State is set to isValidatedButUnfueled");
+                }else{
+                    DisplayScreen ds5 = new DisplayScreen("Invalid Zip Code.\n Aborting...");
+                                         gpState.setState(State.isOver);
+                    world.removeObjects(getWorld().getObjects(DisplayScreen.class));
+                     world.addObject(ds5,350,100);
+
                 }
               }
+                if((x>=462 && x<=497) && (y>=394 && y<=470) && Greenfoot.mouseClicked(this)){
+                    DisplayScreen ds5 = new DisplayScreen("Transection Cancelled");
+                                         gpState.setState(State.isOver);
+                    world.removeObjects(getWorld().getObjects(DisplayScreen.class));
+                     world.addObject(ds5,350,100);
+                }
             }                       
             System.out.println("State is set to isValidatedButUnfueled---2");
+        }
+        else if(Greenfoot.mousePressed(this)){
+            GreenfootSound gSound = new GreenfootSound("beepSound.wav");
+            gSound.play();
         }
         /*GasPumpState gpState = GasPumpState.getInstance();
         World world = getWorld();
