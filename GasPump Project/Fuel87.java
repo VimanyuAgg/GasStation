@@ -12,6 +12,19 @@ public class Fuel87 extends FuelType
      * Act - do whatever the Diesel wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    private double price = 1;
+    private boolean isSelected = false;
+    
+    public double getPrice(){
+        //DecimalFormat df = new DecimalFormat("0.00");
+        return price;
+    }
+    
+    public boolean wasSelected(){
+        return isSelected;
+    }
+    
+    
     public void displayMessage(){
            World world = getWorld();
            world.removeObjects(getWorld().getObjects(DisplayScreen.class));
@@ -29,6 +42,7 @@ public class Fuel87 extends FuelType
             // Add your action code here.
             if(gpState.getState() == State.isValidatedButUnfueled && Greenfoot.mousePressed(this)){
             this.displayMessage();
+            isSelected=true;
             System.out.println("Inside Fuel87 - Setting the state to isFuelSelectedButUnfueled");
             gpState.setState(State.isFuelSelectedButUnfueled);
         

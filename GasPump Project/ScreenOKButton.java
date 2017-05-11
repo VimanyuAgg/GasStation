@@ -16,6 +16,13 @@ public class ScreenOKButton extends ScreenButtons
     
   //  rp.setPrintApproval();
      GasPumpState gpState = GasPumpState.getInstance();
+     private boolean carWashSelected = false;
+     
+     public boolean getCarWashSelectedStatus(){
+        return carWashSelected;
+        
+        }
+     
     public void act() 
     {
             World world = getWorld(); 
@@ -24,8 +31,13 @@ public class ScreenOKButton extends ScreenButtons
             ReceiptPrinter rp=world.getObjects(ReceiptPrinter.class).get(0);
             gpState.setState(State.isValidatedButUnfueled);
             System.out.println("Inside screenOKButton for carwash and setting PrintApproval to yes");
+            if(gpState.getState() == State.isCarWashSelected){
+            carWashSelected = true;
+            }
             rp.setPrintApproval();
         }
+       
+        
         if(gpState.getState() == State.isUnInitialized && Greenfoot.mousePressed(this)){
         GreenfootSound gSound = new GreenfootSound("beepSound.wav");
           gSound.play();
@@ -37,7 +49,11 @@ public class ScreenOKButton extends ScreenButtons
 
         world.removeObjects(getWorld().getObjects(DisplayScreen.class));
         DisplayScreen ds1 = new DisplayScreen("Printing Receipt! ");
-        world.addObject(ds1,100,250); 
+        world.addObject(ds1,100,250);
+        ReceiptPrinter rp = world.getObjects(ReceiptPrinter.class).get(0);
+        rp.setPrintApproval();
+        Receipt receipt = new Receipt();
+        world.addObject(receipt,550,450);
         gpState.setState(State.isPrintReceipt);
         
         }

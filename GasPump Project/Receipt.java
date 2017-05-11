@@ -1,5 +1,5 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
-
+import java.text.DecimalFormat;
 /**
  * Write a description of class Receipt here.
  * 
@@ -18,19 +18,29 @@ public class Receipt extends Actor
         GasPumpState gpState = GasPumpState.getInstance();
         World world = getWorld();
         if(gpState.getState() == State.isPrintReceipt){
-            Receipt receipt = new Receipt();
+            System.out.println("Inside receipt act");
+
             //get price
             //get price + Carwash Price <---need to print sum
             //boolean of carwash scenario
-            
+            DecimalFormat df = new DecimalFormat("0.00");
+            Nozzle noz = world.getObjects(Nozzle.class).get(0);
             DisplayScreen ds1 = new DisplayScreen("Thanks for your visit !");
-            DisplayScreen ds2_withoutCarwash = new DisplayScreen("Bill Details: "+"");
-            DisplayScreen ds3_CarwashDetails = new DisplayScreen();
-
+            DisplayScreen ds2_withoutCarwash = new DisplayScreen("Bill Details:\n "+"GAS BILL: $"+df.format(noz.getCurrentBill()));
+            DisplayScreen ds3_CarwashDetails = new DisplayScreen("CARWASH DISCOUNT 10%");
+            DisplayScreen ds3_finalBill = new DisplayScreen("Final Bill: $"+df.format((noz.getCurrentBill()*0.9)));
+            ScreenOKButton cwStatus = world.getObjects(ScreenOKButton.class).get(0);
         ReceiptPrinter rp = world.getObjects(ReceiptPrinter.class).get(0);
          if(rp.getPrintApprovalStatus()){
-                world.addObject(new Receipt(), 617, 843);
-                world.addObject(ds1,400,100);
+                world.removeObjects(getWorld().getObjects(DisplayScreen.class));
+                world.addObject(ds1,550,460);
+                world.addObject(ds2_withoutCarwash,550,480);
+                if(cwStatus.getCarWashSelectedStatus()){
+                    world.addObject(ds3_CarwashDetails,550,510);
+                    world.addObject(ds3_finalBill,550,520);
+                }
+                
+                //world.addObject(ds1,550,450);
             }
            
         }
