@@ -29,7 +29,7 @@ public class ScreenJokeButton extends ScreenButtons
             List<String> jokesList = new ArrayList<String>();
             jokesList.add("Team work is important; it helps to\n put the blame on someone else.");
             jokesList.add("You're not fat, you're just... \n\teasier to see.");
-            jokesList.add("My wife and I were happy for twenty years. Then we met.");
+            jokesList.add("My wife and I were happy for twenty years. \nThen we met.");
             int randomNum = ((int)((Math.random()*jokesList.size())%jokesList.size()));
             DisplayScreen ds = new DisplayScreen(jokesList.get(randomNum));
 

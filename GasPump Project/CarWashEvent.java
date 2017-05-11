@@ -14,7 +14,7 @@ public class CarWashEvent implements Component
          || gpState.getState() == State.isCarWashSelected) && !hasRan)
      {
         GasPumpWorld.gpWorld.removeObjects(GasPumpWorld.gpWorld.getObjects(DisplayScreen.class));
-     DisplayScreen ds3 = new DisplayScreen("Do you want to add a Car wash ?\n Discount 20% on Fuel");
+     DisplayScreen ds3 = new DisplayScreen("Do you want to add a \nCar wash for $5.00?\n Discount 20% on Fuel");
      GasPumpWorld.gpWorld.addObject(ds3,330,150);
      DisplayScreen ds4 = new DisplayScreen("OK");
      DisplayScreen ds5 = new DisplayScreen("NO");

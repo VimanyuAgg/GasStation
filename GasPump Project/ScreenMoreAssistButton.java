@@ -19,7 +19,7 @@ public class ScreenMoreAssistButton extends ScreenButtons
         if(Greenfoot.mousePressed(this)){
         world.removeObjects(getWorld().getObjects(DisplayScreen.class));    
         DisplayScreen ds = new DisplayScreen("Please stay put.\nHelp is on the way ");
-        world.addObject(ds,400,250);
+        world.addObject(ds,340,150);
         GreenfootSound helpSound = new GreenfootSound("HelpNeeded.wav");
         helpSound.play();
         GasPumpState gpState  = GasPumpState.getInstance();

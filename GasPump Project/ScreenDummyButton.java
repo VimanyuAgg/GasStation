@@ -17,7 +17,7 @@ public class ScreenDummyButton extends ScreenButtons
         // Add your action code here.
         GasPumpState gpState = GasPumpState.getInstance();
         
-        if(gpState.getState() == State.isUnInitialized && Greenfoot.mousePressed(this)){
+        if((gpState.getState() == State.isUnInitialized || gpState.getState() == State.isUnValidated) && Greenfoot.mousePressed(this)){
         GreenfootSound gSound = new GreenfootSound("beepSound.wav");
           gSound.play();
         }

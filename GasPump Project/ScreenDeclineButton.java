@@ -16,10 +16,17 @@ public class ScreenDeclineButton  extends ScreenButtons
         if((gpState.getState() == State.isCarWashSelected 
            ||gpState.getState() == State.isPrintApproval) && Greenfoot.mousePressed(this)){
             System.out.println("Inside screenDeclineButton for carwash/printApproval");
+            ReceiptPrinter rp = world.getObjects(ReceiptPrinter.class).get(0);
+            System.out.println("PrintApproval boolean"+rp.getPrintApprovalStatus());
+            if(gpState.getState() == State.isPrintApproval){
+                rp.setResolver();
+                rp.setDisplayedTextOnce();
+            }
             gpState.setState(State.isValidatedButUnfueled);
         }
         // Add your action code here.
-        if(gpState.getState() == State.isUnInitialized && Greenfoot.mousePressed(this)){
+        if((gpState.getState() == State.isUnInitialized 
+        || gpState.getState() == State.isUnValidated) && Greenfoot.mousePressed(this)){
         GreenfootSound gSound = new GreenfootSound("beepSound.wav");
           gSound.play();
         }

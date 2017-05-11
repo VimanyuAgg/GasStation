@@ -115,7 +115,7 @@ public class Keypad extends Actor
                 }
               }
                 if((x>=462 && x<=497) && (y>=394 && y<=470) && Greenfoot.mouseClicked(this)){
-                    DisplayScreen ds5 = new DisplayScreen("Transection Cancelled");
+                    DisplayScreen ds5 = new DisplayScreen("Transaction Cancelled");
                                          gpState.setState(State.isOver);
                     world.removeObjects(getWorld().getObjects(DisplayScreen.class));
                      world.addObject(ds5,350,100);

@@ -12,8 +12,8 @@ public class PrintApprovalEvent implements Component
       
         if((gpState.getState() == State.isValidatedButUnfueled
             || gpState.getState() == State.isPrintApproval) && !hasRan ){
-        ReceiptPrinter rp = GasPumpWorld.gpWorld.getObjects(ReceiptPrinter.class).get(0);
-        rp.setPrintApproval();
+        //ReceiptPrinter rp = GasPumpWorld.gpWorld.getObjects(ReceiptPrinter.class).get(0);
+        //rp.setPrintApproval();
         
         GasPumpWorld.gpWorld.removeObjects(GasPumpWorld.gpWorld.getObjects(DisplayScreen.class));
         DisplayScreen ds1 = new DisplayScreen("Do you want to print Receipt ?");

@@ -27,7 +27,7 @@ public class ScreenAbortButton extends ScreenButtons
 
             world.removeObjects(getWorld().getObjects(DisplayScreen.class));
             DisplayScreen ds = new DisplayScreen("BYE BYE");
-            world.addObject(ds,400,250);
+            world.addObject(ds,340,150);
             
             gpState.setState(State.isOver);
     }

@@ -99,14 +99,16 @@ public class Nozzle extends Actor
                      //for(NozzleHole n : nozzleHole){
                          long endTime = System.currentTimeMillis();
                          int durationMillis = (int)(endTime - startTime);
-                         System.out.println("You fueled for "+Integer.toString(durationMillis/1000)+ " seconds"); 
+                         System.out.println("You fueled for "+Integer.toString(durationMillis/1000)+ " seconds");
+                         gpState.setState(State.isFilled);
                      //}
                      
-                     world.removeObjects(getWorld().getObjects(DisplayScreen.class));
-                        
-                     DisplayScreen ds3 = new DisplayScreen("Fuel Filled");
-                     world.addObject(ds3,350,250);
-                     gpState.setState(State.isFilled);
+                          /*world.removeObjects(getWorld().getObjects(DisplayScreen.class));
+                          DisplayScreen ds = new DisplayScreen("Thanks for going paperless");
+                          DisplayScreen ds2 = new DisplayScreen("Bye Bye...");
+           
+                          world.addObject(ds,330,120);
+                          //world.addObject(ds2,320,180);*/
                     }
                 }   
            

@@ -18,7 +18,7 @@ public class Scenario3 extends Actor
     {
         // Add your action code here.
         if(Greenfoot.mousePressed(this)){
-         System.out.println("Scenario 1 Clicked");
+         System.out.println("Scenario 3 Clicked");
         isRunning = true;
         order3 = BuildOrder3.getOrder();
         order3.startEvent();

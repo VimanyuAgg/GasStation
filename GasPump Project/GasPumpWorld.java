@@ -33,7 +33,7 @@ public class GasPumpWorld extends World
         //System.out.println("Initializing World");
         addObject(gasMachine, 420, 290);
         addObject( new RealCard(), 100, 300 );
-        addObject( new FakeCard(), 57, 100 );
+        //addObject( new FakeCard(), 57, 100 );
         addObject( new CardSlot(),230,480);
         addObject( new DisplayScreen(), 367, 367 ) ;
         addObject( new Keypad(), 430, 500);

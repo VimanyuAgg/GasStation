@@ -18,8 +18,9 @@ public class ScreenHelpButton extends ScreenButtons
         World world = getWorld();
         
         if(Greenfoot.mousePressed(this)){
-        DisplayScreen ds = new DisplayScreen("Press Red Button to Abort\nPress Yellow Button for Jokes.\nPress Orange Button for more assistance");
-        world.addObject(ds,400,250);
+        world.removeObjects(getWorld().getObjects(DisplayScreen.class));
+        DisplayScreen ds = new DisplayScreen("Press Red Button to Abort\nPress Yellow Button for Jokes.\nPress Orange Button\n for more assistance");
+        world.addObject(ds,335,225);
         }
         
     }    

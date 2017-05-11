@@ -25,12 +25,12 @@ public class GasPumpMachine extends Actor
         int x= Greenfoot.getMouseInfo().getX();
         int y =Greenfoot.getMouseInfo().getY();
          
-         DisplayScreen ds1 = new DisplayScreen(Integer.toString(x));
+         /*DisplayScreen ds1 = new DisplayScreen(Integer.toString(x));
          DisplayScreen ds2 = new DisplayScreen(Integer.toString(y));
          world.removeObject(ds1);
          world.removeObject(ds2); 
          world.addObject(ds1,20,580);
-         world.addObject(ds2,60,580);
+         world.addObject(ds2,60,580);*/
         
         
         }

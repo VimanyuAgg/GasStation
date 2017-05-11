@@ -16,6 +16,7 @@ public class ReceiptPrinter extends Actor
     private boolean isWorking = false;
     private boolean printApproval =false;
     private boolean displayedTextOnce = false;
+    private boolean resolver = true;
     
     public void setPrintApproval(){
     printApproval = true;
@@ -26,10 +27,15 @@ public class ReceiptPrinter extends Actor
     return printApproval;
     
     }
+    public void setDisplayedTextOnce(){
+        displayedTextOnce=true;
+    }
     public void setToWorkingState(){
         isWorking = true;
     }
-    
+    public void setResolver(){
+     resolver=false;
+    }
     public boolean isWorking(){
     
         return isWorking;
@@ -39,8 +45,12 @@ public class ReceiptPrinter extends Actor
     GasPumpState gpState = GasPumpState.getInstance();
         // Add your action code here.
         World world = getWorld();
+        //System.out.println("PrintApproval :"+printApproval);
         if(gpState.getState() == State.isFilled){
             if (!printApproval && !displayedTextOnce){
+                
+           
+                world.removeObjects(getWorld().getObjects(DisplayScreen.class));
             DisplayScreen ds1 = new DisplayScreen("Do you want to print Receipt ?");
             DisplayScreen ds2 = new DisplayScreen("YES");
             DisplayScreen ds3 = new DisplayScreen("NO");
@@ -48,7 +58,8 @@ public class ReceiptPrinter extends Actor
             world.addObject(ds2,190,200);
             world.addObject(ds3,460,100);
             displayedTextOnce = true;
-            }
+            
+        }
            
             //If yes
             if(printApproval){
@@ -60,6 +71,10 @@ public class ReceiptPrinter extends Actor
             
             }
             
+         if(!resolver){
+            gpState.setState(State.isPrintReceipt);
+            resolver = true;
+            }
             
         
         }
