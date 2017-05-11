@@ -27,7 +27,7 @@ public class Receipt extends Actor
             Nozzle noz = world.getObjects(Nozzle.class).get(0);
             DisplayScreen ds1 = new DisplayScreen("Thanks for\n your visit !");
             DisplayScreen ds2_withoutCarwash = new DisplayScreen("Bill Details:\n "+"GAS BILL: $"+df.format(noz.getCurrentBill()));
-            DisplayScreen ds3_CarwashDetails = new DisplayScreen("CARWASH DISCOUNT 10%");
+            DisplayScreen ds3_CarwashDetails = new DisplayScreen("CARWASH\nDISCOUNT: 10%");
             DisplayScreen ds3_finalBill = new DisplayScreen("Final Bill: $"+df.format((noz.getCurrentBill()*0.9)));
             ScreenOKButton cwStatus = world.getObjects(ScreenOKButton.class).get(0);
         ReceiptPrinter rp = world.getObjects(ReceiptPrinter.class).get(0);
@@ -37,8 +37,10 @@ public class Receipt extends Actor
                 world.addObject(ds2_withoutCarwash,550,440);
                 System.out.print("Car wash status "+cwStatus.getCarWashSelectedStatus());
                 if(cwStatus.getCarWashSelectedStatus()){
-                    world.addObject(ds3_CarwashDetails,550,510);
-                    world.addObject(ds3_finalBill,550,520);
+                world.removeObjects(getWorld().getObjects(DisplayScreen.class));
+                world.addObject(ds2_withoutCarwash,550,368);
+                    world.addObject(ds3_CarwashDetails,550,423);
+                    world.addObject(ds3_finalBill,550,463);
                 }
                 
                 //world.addObject(ds1,550,450);

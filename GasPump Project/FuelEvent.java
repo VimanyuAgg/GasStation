@@ -23,9 +23,9 @@ public class FuelEvent implements Component
         DisplayScreen ds2 = new DisplayScreen("$"+(df.format(f93.getPrice())+"/\ngal."));
         DisplayScreen ds3 = new DisplayScreen("$"+String.valueOf(df.format(f89.getPrice())+"/\ngal."));
         DisplayScreen ds4 = new DisplayScreen("$"+String.valueOf(df.format(f87.getPrice())+"/\ngal."));
-        GasPumpWorld.gpWorld.addObject(ds2,250,259);
-         GasPumpWorld.gpWorld.addObject(ds3,340,259);
-         GasPumpWorld.gpWorld.addObject(ds4,430,259);
+        GasPumpWorld.gpWorld.addObject(ds2,250,240);
+         GasPumpWorld.gpWorld.addObject(ds3,340,240);
+         GasPumpWorld.gpWorld.addObject(ds4,430,240);
          GasPumpWorld.gpWorld.addObject(ds,320,150); 
            
           // GasPumpWorld.gpWorld.addObject(ds,350,250);
